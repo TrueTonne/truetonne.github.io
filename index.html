@@ -204,8 +204,8 @@ document.getElementById('material').onchange = function() {
     label.textContent = '(in NOS)';
     document.getElementById('qty').placeholder = 'e.g. 500';
   } else {
-    label.textContent = '(in Tonnes)';
-    document.getElementById('qty').placeholder = 'e.g. 20';
+    label.textContent = '(in Box)';
+    document.getElementById('qty').placeholder = 'e.g. 10';
   }
 };
 
@@ -236,7 +236,7 @@ function placeOrder() {
     return;
   }
 
-  var unit = 'Tonnes';
+  var unit = 'Box';
   if (material.indexOf('Solid') !== -1 || material.indexOf('Hollow') !== -1) {
     unit = 'NOS';
   }
